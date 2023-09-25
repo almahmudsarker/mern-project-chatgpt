@@ -4,8 +4,7 @@ const { ObjectId } = require('mongodb');
 
 // Import necessary controllers
 const storiesController = require('../controllers/stories');
-const authController = require('../controllers/auth'); // If implementing authentication
-
+const authController = require('../controllers/auth'); 
 // Story routes
 router.get('/stories', storiesController.getAllStories);
 router.post('/stories', storiesController.createStory);
@@ -19,7 +18,7 @@ router.post('/stories/:id/continue', storiesController.continueStory);
 router.post('/stories/:id/feedback', storiesController.submitFeedback);
 
 
-// Authentication routes (if implementing authentication)
+// Authentication routes
 router.post('/register', authController.register);
 router.post('/login', authController.login);
 

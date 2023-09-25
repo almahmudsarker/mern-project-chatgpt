@@ -34,7 +34,7 @@ async function connectToDatabase() {
 connectToDatabase();
 
 // API Routes
-const apiRoutes = require('./routes/api'); // You'll need to create this file
+const apiRoutes = require('./routes/api'); 
 app.use('/api', apiRoutes);
 
 // Handle production

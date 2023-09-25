@@ -5,9 +5,9 @@ const Leaderboard = () => {
 
   useEffect(() => {
     // Fetch and set top-voted stories from the backend API
-    // Example: fetch('/api/top-stories')
-    //   .then((response) => response.json())
-    //   .then((data) => setTopStories(data));
+      fetch('/api/top-stories')
+      .then((response) => response.json())
+      .then((data) => setTopStories(data));
   }, []);
 
   return (

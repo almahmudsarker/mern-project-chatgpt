@@ -3,7 +3,7 @@ const router = express.Router();
 const jwt = require('jsonwebtoken');
 const bcrypt = require('bcrypt');
 
-// User model and database connection (adjust as needed)
+// User model and database connection
 const User = require('../models/User');
 const db = require('../db');
 
@@ -11,7 +11,7 @@ const db = require('../db');
 router.post('/register', async (req, res) => {
   try {
     const { username, password } = req.body;
-    // Check if the username is already taken (you may want to add more validation)
+    // Check if the username is already taken 
     const existingUser = await User.findOne({ username });
     if (existingUser) {
       return res.status(400).json({ message: 'Username already exists' });
